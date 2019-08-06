@@ -16,7 +16,7 @@ Install and run binary via python setup-tools.
 $ python3 -m venv env
 $ python3 -m pip install -r requirements.txt
 $ python3 setup.py install
-$ harbor
+$ env/bin/harbor
 ```
 
 ## Development
