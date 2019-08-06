@@ -1,4 +1,6 @@
-# Harbor, a package to crawl, backup and export weibo content.
+# Harbor
+
+A package to crawl, backup and export weibo content.
 
 ## Installation
 
@@ -7,6 +9,15 @@
 - Python 3.7 and up
 
 ## Usage
+
+Install and run binary via python setup-tools.
+
+```
+$ python3 -m venv env
+$ python3 -m pip install -r requirements.txt
+$ python3 setup.py install
+$ harbor
+```
 
 ## Development
 
@@ -17,17 +28,6 @@ $ pip install -e .
 ```
 
 Once you update requirements, make sure use `pip-compile` to refresh `requirements.txt`.
-
-## Run
-
-Install and run binary via python setup-tools.
-
-```
-$ python3 -m venv env
-$ python3 -m pip install -r requirements.txt
-$ python3 setup.py install
-$ harbor
-```
 
 ## Contributing
 
