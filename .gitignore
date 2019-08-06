@@ -1,0 +1,7 @@
+env*
+.vscode
+dist
+build
+*.egg-info
+*.json
+*.db
