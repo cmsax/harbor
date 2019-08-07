@@ -8,11 +8,15 @@
 # Modified By:
 # ----
 # Copyright (c) 2019 MingshiCai i@unoiou.com
+import logging
+
 from harbor.constant import HEADERS
 from harbor.models.attachment import Attachment
 from harbor.models.base import db
 from harbor.models.post import Post
 from harbor.spider.main import Spider
+
+LOGGER = logging(__name__)
 
 
 def main():
@@ -26,8 +30,8 @@ def main():
     try:
         s.start()
     except Exception as e:
-        print(e)
-        print(s._current_page)
+        LOGGER.debug(e)
+        LOGGER.debug(s._current_page)
         s._dump()
 
 

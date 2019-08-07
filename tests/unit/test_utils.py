@@ -8,9 +8,14 @@
 # Modified By:
 # ----
 # Copyright (c) 2019 MingshiCai i@unoiou.com
+import logging
+
 from nose.tools import assert_equals
 
 from harbor import utils
+
+# for debugging, avoid `print`
+LOGGER = logging.getLogger(__name__)
 
 
 def test_http_to_https():

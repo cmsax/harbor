@@ -8,6 +8,7 @@
 # Modified By:
 # ----
 # Copyright (c) 2019 MingshiCai i@unoiou.com
+import logging
 import json
 import re
 
@@ -27,12 +28,18 @@ from harbor.models.attachment import Attachment
 from harbor.models.base import db
 from harbor.models.post import Post
 
+LOGGER = logging.getLogger(__name__)
+
 
 class Spider:
     """A spider that does everything.
+
+    Not an abstract factory.
     """
 
     def __init__(self, headers, uid, marshaller_name):
+        if not headers['Cookie']:
+            raise KeyError("Empty cookie.")
         self._all_page_num = None
         self._all_post_num = 0
         self._current_year = ar().year
@@ -125,7 +132,7 @@ class Spider:
             img = item.select('div a img')
             img_src = img[0].attrs['src'] if img else None
             temp['img_src'] = img_src
-            print('img_src: {}'.format(img_src))
+            LOGGER.debug('img_src: {}'.format(img_src))
             # time & source device
             ct = item.select('span.ct')
             if ct:
@@ -164,7 +171,7 @@ class Spider:
         """
         if not self._all_page_num:
             self._set_all_page_num()
-            print(self._all_page_num)
+            LOGGER.debug('overall pages: {}'.format(self._all_page_num))
         with tqdm(total=self._all_page_num) as progress_bar:
             while self.has_post:
                 self._get_html()
