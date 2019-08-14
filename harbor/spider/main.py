@@ -25,7 +25,6 @@ from harbor.constant import (
 )
 from harbor.marshaller.factory import Marshaller
 from harbor.models.attachment import Attachment
-from harbor.models.base import db
 from harbor.models.post import Post
 
 LOGGER = logging.getLogger(__name__)
