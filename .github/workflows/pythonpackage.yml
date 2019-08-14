@@ -22,6 +22,5 @@ jobs:
           pip install -r requirements.txt
       - name: Test and lint
         run: |
-          pip install nose
           python setup.py flake8
           python setup.py nosetests
