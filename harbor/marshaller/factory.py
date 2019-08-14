@@ -125,8 +125,7 @@ class Marshaller:
             'mobiledoc': (
                 "{\"version\":\"0.3.1\",\"atoms\":[],\"cards\":[],"
                 "\"markups\":[],\"sections\":[[1,\"p\","
-                "[[0,[],0,\"" + purified_string(post_obj.content) +
-                "\"]]]]}"
+                "[[0,[],0,\"" + purified_string(post_obj.content) + "\"]]]]}"
             ),
             'plaintext': post_obj.content,
             'feature_image': https_and_large(post_obj.img_src),

@@ -8,7 +8,8 @@
 # Modified By:
 # ----
 # Copyright (c) 2019 MingshiCai i@unoiou.com
-from peewee import CharField, IntegerField, TextField, DateTimeField, BooleanField
+from peewee import (CharField, IntegerField, TextField, DateTimeField,
+                    BooleanField)
 
 from harbor.models.base import BaseModel
 
