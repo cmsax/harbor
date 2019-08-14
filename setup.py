@@ -26,7 +26,8 @@ setup(
         'requests',
         'BeautifulSoup4',
         'tqdm',
-        'nose'
+        'nose',
+        'flake8'
     ],
 
     entry_points={
