@@ -4,6 +4,8 @@ A package to crawl, backup and export weibo content.
 
 ## Installation
 
+Install via pip: `pip install weibo-harbor`
+
 ### Requirements
 
 - Python 3.7 and up

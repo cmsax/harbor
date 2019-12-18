@@ -25,6 +25,8 @@ WEIBO_USERNAME='[USERNAME]' WEIBO_PASSWORD='[PASSWORD]' python3 weibo_bot.py
 
 ## 进阶使用
 
+通过 pip 安装：`pip install weibo-harbor`
+
 ### 依赖
 
 - Python 3.7 and up

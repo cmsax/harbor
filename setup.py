@@ -12,13 +12,20 @@
 """
 from setuptools import setup, find_packages
 
+readme = None
+with open('./README_en.md', 'r+', encoding='utf8') as f:
+    readme = f.read()
+
+
 setup(
-    name='Harbor',
-    version='0.1.0',
+    name='weibo-harbor',
+    version='0.1.2',
     description='A package to crawl, backup and export weibo content.',
     author='MingshiCai',
     author_email='i@unoiou.com',
     url='https://github.com/cmsax/harbor',
+    long_description=readme,
+    long_description_content_type='text/markdown',
 
     packages=find_packages(),
 
