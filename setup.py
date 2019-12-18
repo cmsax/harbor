@@ -24,6 +24,7 @@ setup(
         'arrow',
         'peewee',
         'requests',
+        'selenium',
         'BeautifulSoup4',
         'tqdm',
         'nose',

@@ -23,7 +23,7 @@ from harbor.constant import (
     COMMENT_NUM_PATTERN, REPO_NUM_PATTERN, REPO_TEST_PATTERN, TIME_PATTERN,
     DATE_FMTS, SOURCE_DEVICE_PATTERN, VISIBILITY_PATTERN
 )
-from harbor.marshaller.factory import Marshaller
+from harbor.marshallers.factory import Marshaller
 from harbor.models.attachment import Attachment
 from harbor.models.post import Post
 
@@ -181,3 +181,27 @@ class Spider:
                     'Page #{}'.format(self._current_page))
                 sleep(4)
             self._dump()
+
+
+def main():
+    from harbor.models.base import db
+    from harbor.models.post import Post
+    from harbor.models.attachment import Attachment
+    from harbor.constant import HEADERS
+    """Entry point
+    """
+    db.create_tables([Attachment, Post])
+    HEADERS['Cookie'] = ''
+    uid = ''
+    marshaller = 'ghost'
+    s = Spider(HEADERS, uid, marshaller)
+    try:
+        s.start()
+    except Exception as e:
+        LOGGER.debug(e)
+        LOGGER.debug(s._current_page)
+        s._dump()
+
+
+if __name__ == "__main__":
+    main()
