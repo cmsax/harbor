@@ -16,7 +16,9 @@ setup(
     name='Harbor',
     version='0.1.0',
     description='A package to crawl, backup and export weibo content.',
-    author='MingshiCai i@unoiou.com',
+    author='MingshiCai',
+    author_email='i@unoiou.com',
+    url='https://github.com/cmsax/harbor',
 
     packages=find_packages(),
 
