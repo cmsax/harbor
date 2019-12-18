@@ -9,9 +9,8 @@ import re
 import shutil
 
 from os import getenv
-from requests import get, Session
+from requests import Session
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 from harbor.marshallers.mobile_marshaller import MobileMarshaller
