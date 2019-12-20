@@ -19,7 +19,7 @@ A project for backuping own weibo content, including:
 Powershell:
 
 ```powershell
-$env:WEIBO_USERNAME = [USERNAME]; $env:PASSWORD = [PASSWORD]; python3 weibo_bot.py
+$env:WEIBO_USERNAME = [USERNAME]; $env:WEIBO_PASSWORD = [PASSWORD]; python3 weibo_bot.py
 ```
 
 Bash:

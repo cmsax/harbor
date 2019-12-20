@@ -48,7 +48,7 @@ $ env/bin/harbor
 Powershell:
 
 ```powershell
-$env:WEIBO_USERNAME = [USERNAME]; $env:PASSWORD = [PASSWORD]; harbor
+$env:WEIBO_USERNAME = [USERNAME]; $env:WEIBO_PASSWORD = [PASSWORD]; harbor
 ```
 
 Bash:
